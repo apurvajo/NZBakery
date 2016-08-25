@@ -1,5 +1,12 @@
 ﻿@{
     Page.Title = "About Us";
+    
+    foreach (System.Collections.DictionaryEntry env in System.Environment.GetEnvironmentVariables())
+    {
+        string name = (string)env.Key;
+        string value = (string)env.Value;
+        Response.Write(string.Format("{0}={1} </br>", name, value));
+    }
 }
 
 <section id="main">
