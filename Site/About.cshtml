@@ -5,7 +5,9 @@
     {
         string name = (string)env.Key;
         string value = (string)env.Value;
-        Response.Write(string.Format("{0}={1} </br>", name, value));
+        if (name == "REGION_NAME") {  
+            Response.Write(string.Format("{0}={1} </br>", name, value));
+        }
     }
 }
 
